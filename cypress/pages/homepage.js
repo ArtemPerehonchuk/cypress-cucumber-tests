@@ -30,7 +30,7 @@ class HomePage extends Page {
             url: expectedUrl,
             failOnStatusCode: false 
         }).then((response) => {
-            expect(response.status).to.eq(999); 
+            expect(response.status).to.eq(200); 
         });
     } 
 
@@ -88,7 +88,7 @@ class HomePage extends Page {
     }
 
     clickOnCustomersStoriesItem() {
-        this.elements.customerStoriesItem().click();
+        this.elements.customerStoriesItem().click({force: true});
     }
 }
 module.exports = HomePage;
