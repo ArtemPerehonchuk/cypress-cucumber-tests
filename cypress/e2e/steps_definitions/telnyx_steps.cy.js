@@ -32,7 +32,7 @@ const signUpPage = new SignUpPage();
 
 Given('I open the {string} website', (website) => {
     if (website === "Telnyx") {
-      homePage.navigate('/');
+        homePage.navigate('/');
     }
 });
 
@@ -70,12 +70,12 @@ When('I scroll the page down to the {string} section', (section) => {
     }
 });
 
-When('I click on the {string} link',(link) => {
+When('I click on the {string} link', (link) => {
     if (link === 'LinkedIn') {
         cy.intercept('GET', 'https://www.linkedin.com/company/telnyx/').as('linkedinRequest');
         homePage.clickOnLinkedinLink();
     } else if (link === 'Operator Connect') {
-      microsoftTeamsPage.clickOnOperatorConnectLink();
+        microsoftTeamsPage.clickOnOperatorConnectLink();
     } else if (link === 'Read customer story') {
         customerStoriesPage.clickOnReadCustomerStoryLink();
     } else if (link === 'portal') {
@@ -83,7 +83,7 @@ When('I click on the {string} link',(link) => {
     }
 });
 
-When ('I type {string} into the {string} input field', (word, input) => {
+When('I type {string} into the {string} input field', (word, input) => {
     if (input === 'Search') {
         resourcesPage.searchWord(word);
     }
@@ -135,13 +135,13 @@ When('I select the {string} item from the country drop-down', (item) => {
     if (item === 'Germany') {
         sipTrunkingPricingPage.clickGermanyItem();
     }
-  });
+});
 
 When('I press {string} on the keyboard', (key) => {
     if (key === 'Enter') {
         resourcesPage.pressEnter();
     }
-  });
+});
 
 When('I click on the {string} section', (section) => {
     if (section === 'BEST Canada Energy') {
@@ -162,11 +162,11 @@ Then('I should see the {string} page', (page) => {
     } else if (page === 'Resources') {
         resourcesPage.checkResourcesUrl(resourcesUrl);
     } else if (page === 'Telnyx resources') {
-        resourcesPage.checkResourcesUrl(resourcesUrl); 
+        resourcesPage.checkResourcesUrl(resourcesUrl);
     } else if (page === 'Customer Stories') {
         customerStoriesPage.checkCustomerStoriesUrl(customerStoriesUrl);
     }
-  });
+});
 
 Then('I should see the {string} form', (form) => {
     if (form === 'TALK TO AN EXPERT') {
@@ -193,4 +193,4 @@ Then('I should see the {string} header', (header) => {
 Then('I should see the "Search results for {string}" section', (word) => {
     resourcesPage.checkSearchResultsHeader(word);
 });
-  
+
