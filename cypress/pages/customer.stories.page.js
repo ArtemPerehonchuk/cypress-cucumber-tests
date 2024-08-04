@@ -12,7 +12,7 @@ class CastomerStoriesPage extends Page {
 
     clickOnReadCustomerStoryLink() {
         this.elements.cosmoSection().trigger('mouseover');
-        this.elements.readCastomerstoryLink().click();
+        this.elements.readCastomerstoryLink().click().wait(1000);
     }
 
     checkCustomerStoriesUrl(customerStoriesUrl) {

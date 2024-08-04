@@ -6,7 +6,7 @@ class SmsApiPage extends Page {
     }
 
     clickOnTalkToAnExpertBtn() {
-        this.elements.talkToAnExpertBtn().click();
+        this.elements.talkToAnExpertBtn().click({force: true});
     }
 }
 

@@ -40,7 +40,7 @@ class HomePage extends Page {
     }
 
     clickOnShopItem() {
-        this.elements.shopItem().invoke('removeAttr', 'target').click();
+        this.elements.shopItem().invoke('removeAttr', 'target').click({force: true});
     }
 
     checkTelnyxShopUrl(telnyxShopUrl) {
@@ -60,7 +60,7 @@ class HomePage extends Page {
     }
 
     clickOnMicrosoftTeamsItem() {
-        this.elements.microsoftTeamsItem().click();
+        this.elements.microsoftTeamsItem().click({force: true});
     }
 
     scrollToExploreOurDocsBtn() {
