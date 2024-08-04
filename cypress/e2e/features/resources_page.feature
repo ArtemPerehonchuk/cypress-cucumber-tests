@@ -8,7 +8,7 @@ Feature: Resources page
     Then I should see the "Resources" page
 
   Scenario Outline: Search a word
-    Given I open the "Telnyx resources" page
+    Given I open a "Telnyx resources" page
     When I type "<word>" into the "Search" input field
     And I press "Enter" on the keyboard
     Then I should see the "Search results for '<word>'" section
@@ -19,12 +19,12 @@ Feature: Resources page
         | dolphin |
 
   Scenario: Proceed to the flow page
-    Given I open the "Telnyx resources" page
+    Given I open a "Telnyx resources" page
     When I scroll the page down to the "flow" button
-    And I click on the "flow" button
-    Then I should see the "Introducing Telnyx Flow for no-code workflow automation" header
+    And I click on "flow" button
+    Then I should see "Introducing Telnyx Flow for no-code workflow automation" header
 
   Scenario: Back to blog
-    Given I open the "Telnyx flow-announcement" page
-    When I click on the "Back to blog" button
-    Then I should see the "Telnyx resources" page
+    Given I open a "Telnyx flow-announcement" page
+    When I click on "Back to blog" button
+    Then I should see the "Resources" page
